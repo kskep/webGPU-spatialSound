@@ -1,0 +1,69 @@
+{
+  "name": "Concert Hall Reflectors",
+  "objects": [
+    {
+      "type": "box",
+      "name": "Stage Shell Left",
+      "center": [-4.6, 3.2, -14.0],
+      "size": [0.35, 6.4, 8.0],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.26
+      }
+    },
+    {
+      "type": "box",
+      "name": "Stage Shell Right",
+      "center": [4.6, 3.2, -14.0],
+      "size": [0.35, 6.4, 8.0],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.26
+      }
+    },
+    {
+      "type": "box",
+      "name": "Rear Shell",
+      "center": [0.0, 3.2, -18.0],
+      "size": [9.2, 6.4, 0.35],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.24
+      }
+    },
+    {
+      "type": "box",
+      "name": "Reflector Cloud A",
+      "center": [0.0, 7.6, -11.5],
+      "size": [6.5, 0.18, 2.0],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.22
+      }
+    },
+    {
+      "type": "box",
+      "name": "Reflector Cloud B",
+      "center": [0.0, 8.2, -7.2],
+      "size": [7.5, 0.18, 2.4],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.22
+      }
+    },
+    {
+      "type": "box",
+      "name": "Audience Absorber Left",
+      "center": [-7.0, 1.4, 2.0],
+      "size": [1.2, 2.8, 12.0],
+      "material": "CURTAIN"
+    },
+    {
+      "type": "box",
+      "name": "Audience Absorber Right",
+      "center": [7.0, 1.4, 2.0],
+      "size": [1.2, 2.8, 12.0],
+      "material": "CURTAIN"
+    }
+  ]
+}

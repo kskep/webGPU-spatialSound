@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>webGPU-spatialSound - BRAS CR2</title>
+    <!-- Development page (Task P). Not an entry of `vite build`; it needs the dev server because the measured
+         responses come from external/bras through the dev-only route in vite.config.ts. -->
+    <style>
+      :root { color-scheme: light dark; --bg: #f6f7f5; --fg: #17201d; --muted: #5d6b66; --line: #cfd6d2; --accent: #1b6b57; }
+      @media (prefers-color-scheme: dark) { :root { --bg: #101715; --fg: #e6ece9; --muted: #98a7a1; --line: #2c3a35; --accent: #5cc4a6; } }
+      body { margin: 0; padding: 24px 16px; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+      main { max-width: 46rem; margin: 0 auto; }
+      h1 { font-size: 1.4rem; margin: 0 0 0.25rem; }
+      p, li { color: var(--muted); }
+      fieldset { border: 1px solid var(--line); border-radius: 6px; margin: 1rem 0; padding: 0.75rem 1rem; }
+      legend { padding: 0 0.4rem; }
+      label { margin-right: 1rem; white-space: nowrap; }
+      button { font: inherit; padding: 0.4rem 0.9rem; border: 1px solid var(--accent); background: transparent; color: var(--fg); border-radius: 6px; cursor: pointer; }
+      button.on { background: var(--accent); color: var(--bg); }
+      button:disabled { opacity: 0.5; cursor: default; }
+      #status { min-height: 1.5em; color: var(--fg); }
+      #numbers { font-variant-numeric: tabular-nums; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Measured against simulated room: BRAS scene CR2</h1>
+      <p>
+        Listen to a source through the measured binaural response (FABIAN dummy head at MP6, head orientation 0) and
+        through the app's simulation of the same loudspeaker and head position (RIEC HRTF, all Task M options on, full
+        impulse-response architecture). Use headphones. The heads differ, so a difference in timbre or width is
+        expected; see <code>docs/validation/BRAS_CR2.md</code> for the numbers. Both responses are scaled to the same
+        broadband energy, so they play at the same level.
+      </p>
+      <fieldset>
+        <legend>Sound</legend>
+        <label><input type="radio" name="sound" value="/soundfile/loop.mp3" checked /> loop.mp3</label>
+        <label><input type="radio" name="sound" value="/soundfile/snare.mp3" /> snare.mp3</label>
+      </fieldset>
+      <fieldset>
+        <legend>Loudspeaker (the head faces LS7; LS3 is left, LS6 is right)</legend>
+        <label><input type="radio" name="ls" value="3" /> LS3</label>
+        <label><input type="radio" name="ls" value="4" /> LS4</label>
+        <label><input type="radio" name="ls" value="5" /> LS5</label>
+        <label><input type="radio" name="ls" value="6" /> LS6</label>
+        <label><input type="radio" name="ls" value="7" checked /> LS7</label>
+      </fieldset>
+      <p>
+        <button id="load">1. Load responses</button>
+        <button id="play" disabled>2. Play / stop</button>
+      </p>
+      <p>
+        <button id="a" disabled>A: measured</button>
+        <button id="b" disabled>B: simulated</button>
+        <button id="dry" disabled>Dry (no room)</button>
+        <span>Keys: A, B, D, space</span>
+      </p>
+      <p id="status">Press "Load responses".</p>
+      <p id="numbers"></p>
+    </main>
+    <script type="module" src="/src/validation/listening.ts"></script>
+  </body>
+</html>

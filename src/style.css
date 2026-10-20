@@ -1,0 +1,132 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #242424;
+  color: #d7e6d7;
+  font-family: Arial, sans-serif;
+}
+.viewport,
+#room {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#room {
+  outline: none;
+  touch-action: none;
+}
+.dg.ac {
+  z-index: 1000 !important;
+}
+.dg input,
+.dg select {
+  color-scheme: light;
+}
+.dg.main {
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
+}
+#debug-panel {
+  position: fixed;
+  left: 12px;
+  top: 12px;
+  width: 260px;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  background: rgba(12, 12, 12, 0.9);
+  color: #d7e6d7;
+  font: 12px/1.35 monospace;
+  padding: 10px;
+  border: 1px solid rgba(120, 180, 120, 0.35);
+  z-index: 30;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+#debug-panel hr {
+  border: 0;
+  border-top: 1px solid #426042;
+  margin: 10px 0;
+}
+#debug-metrics div {
+  margin: 4px 0;
+}
+#debug-metrics strong {
+  float: right;
+  font: 12px monospace;
+}
+#debug-panel small {
+  display: block;
+  margin-top: 12px;
+  color: #aaa;
+  font: 10px/1.5 monospace;
+}
+#status {
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+#status.error {
+  color: #f2a47d;
+}
+#gpu-status {
+  font-size: 11px;
+}
+#response-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 29;
+  pointer-events: none;
+}
+#response {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 600px) {
+  #debug-panel {
+    top: auto;
+    bottom: 155px;
+    width: 180px;
+    font-size: 10px;
+    max-height: 140px;
+    overflow: hidden;
+  }
+  #debug-panel small {
+    display: none;
+  }
+  .dg.main {
+    max-height: calc(100dvh - 160px);
+  }
+}
+#debug-panel details {
+  pointer-events: auto;
+  margin-top: 6px;
+}
+#debug-panel summary {
+  cursor: pointer;
+  color: #9fd29f;
+}
+#probe-metrics div {
+  margin: 4px 0;
+}
+#probe-metrics strong {
+  float: right;
+  font: 12px monospace;
+  max-width: 150px;
+  text-align: right;
+}

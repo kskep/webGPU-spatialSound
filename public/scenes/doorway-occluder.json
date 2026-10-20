@@ -1,0 +1,36 @@
+{
+  "name": "Doorway Occluder",
+  "objects": [
+    {
+      "type": "box",
+      "name": "Door Left Jamb",
+      "center": [-1.25, 1.2, 0.6],
+      "size": [0.35, 2.4, 0.12],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Door Right Jamb",
+      "center": [1.25, 1.2, 0.6],
+      "size": [0.35, 2.4, 0.12],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Door Header",
+      "center": [0.0, 2.55, 0.6],
+      "size": [2.85, 0.3, 0.12],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Rear Divider",
+      "center": [0.0, 1.2, -1.2],
+      "size": [1.8, 2.4, 0.18],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.38
+      }
+    }
+  ]
+}

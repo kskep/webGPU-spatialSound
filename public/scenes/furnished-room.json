@@ -1,0 +1,46 @@
+{
+  "name": "Furnished Room",
+  "objects": [
+    {
+      "type": "box",
+      "name": "Table Top",
+      "center": [0.0, 0.78, 0.0],
+      "size": [1.8, 0.08, 0.9],
+      "material": "WOOD"
+    },
+    {
+      "type": "box",
+      "name": "Table Base",
+      "center": [0.0, 0.39, 0.0],
+      "size": [0.22, 0.78, 0.22],
+      "material": "WOOD"
+    },
+    {
+      "type": "box",
+      "name": "Sofa Block",
+      "center": [-1.45, 0.45, 1.05],
+      "size": [1.5, 0.9, 0.75],
+      "material": {
+        "preset": "CURTAIN",
+        "roughness": 0.55
+      }
+    },
+    {
+      "type": "box",
+      "name": "Bookshelf",
+      "center": [1.6, 1.05, -1.0],
+      "size": [0.45, 2.1, 0.28],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.48
+      }
+    },
+    {
+      "type": "box",
+      "name": "Ceiling Cloud",
+      "center": [0.0, 2.65, 0.0],
+      "size": [2.0, 0.12, 1.1],
+      "material": "ACOUSTIC_PANEL"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Cathedral Columns",
+  "objects": [
+    {
+      "type": "box",
+      "name": "Column 1 Left",
+      "center": [-4.5, 4.0, -10.0],
+      "size": [1.0, 8.0, 1.0],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Column 1 Right",
+      "center": [4.5, 4.0, -10.0],
+      "size": [1.0, 8.0, 1.0],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Column 2 Left",
+      "center": [-4.5, 4.0, 0.0],
+      "size": [1.0, 8.0, 1.0],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Column 2 Right",
+      "center": [4.5, 4.0, 0.0],
+      "size": [1.0, 8.0, 1.0],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Column 3 Left",
+      "center": [-4.5, 4.0, 10.0],
+      "size": [1.0, 8.0, 1.0],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Column 3 Right",
+      "center": [4.5, 4.0, 10.0],
+      "size": [1.0, 8.0, 1.0],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Stone Screen",
+      "center": [0.0, 3.0, 16.0],
+      "size": [7.0, 6.0, 0.4],
+      "material": "CONCRETE"
+    },
+    {
+      "type": "box",
+      "name": "Choir Canopy",
+      "center": [0.0, 10.0, -16.0],
+      "size": [6.5, 0.3, 4.0],
+      "material": {
+        "preset": "WOOD",
+        "roughness": 0.30
+      }
+    }
+  ]
+}
